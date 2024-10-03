@@ -9,7 +9,8 @@ const MusicPlayer = () => {
     // Fetch music files from backend
     const fetchMusic = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/music');
+            // const response = await fetch('http://localhost:5000/api/music');
+            const response = await fetch('13.201.1.145:5000/api/music');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -44,7 +45,8 @@ const MusicPlayer = () => {
         formData.append('music', file);
 
         try {
-            const response = await fetch('http://localhost:5000/api/upload', {
+            // const response = await fetch('http://localhost:5000/api/upload', {
+            const response = await fetch('13.201.1.145:5000/api/upload', {
                 method: 'POST',
                 body: formData,
             });
@@ -67,7 +69,8 @@ const MusicPlayer = () => {
         if (!confirmDelete) return;
 
         try {
-            const response = await fetch(`http://localhost:5000/api/music/${key}`, {
+            // const response = await fetch(`http://localhost:5000/api/music/${key}`, {
+            const response = await fetch(`13.201.1.145:5000/api/music/${key}`, {
                 method: 'DELETE',
             });
 

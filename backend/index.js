@@ -64,7 +64,7 @@ app.post('/api/upload', upload.array('music', 10), (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on :${port}`);
 });
 
 // API to delete a music file from S3
